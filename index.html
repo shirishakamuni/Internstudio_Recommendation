@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recommendation System</title>
+</head>
+<body>
+
+<h2>Product Recommendation</h2>
+
+<input type="text" id="userInput" placeholder="Enter product (mobile/laptop/shoes)">
+<button onclick="recommend()">Get Recommendation</button>
+
+<p id="result"></p>
+
+<script>
+function recommend() {
+  let input = document.getElementById("userInput").value.toLowerCase();
+  let result = "";
+
+  if (input === "mobile") {
+    result = "Recommended: Charger, Earphones";
+  } else if (input === "laptop") {
+    result = "Recommended: Mouse, Keyboard";
+  } else if (input === "shoes") {
+    result = "Recommended: Socks, Shoe Cleaner";
+  } else {
+    result = "No recommendations available";
+  }
+
+  document.getElementById("result").innerText = result;
+}
+</script>
+
+</body>
+</html>
